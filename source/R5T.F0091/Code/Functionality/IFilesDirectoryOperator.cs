@@ -60,5 +60,16 @@ namespace R5T.F0091
 
 			return filePath;
 		}
+
+		public string GetFilesDirectoryFilePath_UsingProjectNameDirectory(
+			string projectNameDirectoryName,
+			string fileName)
+		{
+			var output = this.GetFilesDirectoryFilePath(
+				projectNameDirectoryName,
+				fileName);
+
+			return output;
+		}
     }
 }
