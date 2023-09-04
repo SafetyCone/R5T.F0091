@@ -21,7 +21,7 @@ namespace R5T.F0091
 
         public string GetFilesDirectoryPath()
         {
-			var executableDirectoryPath = Instances.ExecutablePathOperator.GetExecutableDirectoryPath();
+			var executableDirectoryPath = Instances.ExecutablePathOperator.Get_ExecutableDirectoryPath();
 
 			var filesDirectoryPath = this.GetFilesDirectoryPath(executableDirectoryPath);
             return filesDirectoryPath;
