@@ -7,12 +7,19 @@ using R5T.T0132;
 
 namespace R5T.F0091
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <remarks>
+	/// New functionality in R5T.L0071.
+	/// </remarks>
 	[FunctionalityMarker]
 	public partial interface IFilesDirectoryOperator : IFunctionalityMarker
 	{
+		// See R5T.L0071
 		public string GetFilesDirectoryPath(string executableDirectoryPath)
 		{
-			var filesDirectoryPath = Instances.PathOperator.GetDirectoryPath(
+			var filesDirectoryPath = Instances.PathOperator.Get_DirectoryPath(
 				executableDirectoryPath,
 				DirectoryNames.Instance.Files);
 
@@ -29,7 +36,7 @@ namespace R5T.F0091
 
 		public string GetFilesDirectoryDirectoryPath(IEnumerable<string> directoryPathParts)
 		{
-			var directoryPath = Instances.PathOperator.GetDirectoryPath(
+			var directoryPath = Instances.PathOperator.Get_DirectoryPath(
 				DirectoryPaths.Instance.FilesDirectoryPath,
 				directoryPathParts);
 
@@ -46,7 +53,7 @@ namespace R5T.F0091
 
         public string GetFilesDirectoryFilePath(IEnumerable<string> filePathParts)
 		{
-			var filePath = Instances.PathOperator.GetFilePath(
+			var filePath = Instances.PathOperator.Get_FilePath(
 				DirectoryPaths.Instance.FilesDirectoryPath,
 				filePathParts);
 
